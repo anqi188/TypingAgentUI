@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Parameter Configuration</title>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400;1,600;1,700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <link rel="stylesheet" href="css/parameter.css">
+</head>
+<body>
+    <div class="nav-container">
+        <div class="nav-wrapper">
+            <nav>
+                <div class="logo">
+                    <a href="https://aalto.fi/">
+                        <img src="img/Aalto.png" alt="" class="aalto">
+                    </a>
+                    <a href="https://userinterfaces.aalto.fi/">
+                        <img src="img/uig.png" alt="" class="aalto">
+                    </a>
+                    
+                </div> 
+
+                <ul class="nav-item">
+                    <li>
+                        <a href="#">Contact</a>
+                    </li>
+                    <li>
+                        <a href="#">Publication</a>
+                    </li>
+                    <li>
+                        <a href="#">Project</a>
+                    </li>
+                    <li>
+                        <a href="#">GitHub</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+
+    <div class="header-container">
+        <div class="header-wrapper">
+            <div class="header-content">
+                <div>
+                    <img src="img/pg1.png" alt="">
+                </div>
+                
+                <div class="ratio-content">
+                    <div class="ratio">
+                        <input type="radio" id="default" name="parameter" value="default">
+                        <label class="para-ratio" for="default">Default</label><br>
+                    </div>
+                    
+                    <div class="ratio">
+                        <input type="radio" id="custom" name="parameter" value="custom">
+                        <label class="para-ratio" for="custom">Custom</label><br>
+                    </div>
+                </div>
+                <hr>
+
+                <div class="button">
+                    <a href="#">Start Training</a>
+                </div>
+
+                <div class="form-content">
+                    <button class="accordion">Corpus Selection</button>
+                    <div class="panel">
+                        <div class="panel-wrapper">
+                            <form action="">
+                                <div class="panel-item">
+                                    <label class="label-item" for="language">Corpus Language</label>
+                                    <select id="language" name="language">
+                                        <option value="Eng">English</option>
+                                        <option value="Fin">Finnish</option>
+                                    </select>
+                                </div>
+                                <hr>
+                                <div class="panel-item">
+                                    <label class="label-item" for="training-c">Training Corpus</label>
+                                    <div class="ratio">
+                                        <input type="radio" id="train-s" name="train" value="train-s">
+                                        <select id="corpus" name="corpus">
+                                            <option value="E1">English 1</option>
+                                            <option value="E2">English 2</option>
+                                            <option value="E3">English 3</option>
+                                        </select>
+                                    </div>
+                                    <div class="ratio">
+                                        <input type="radio" id="train-u" name="train" value="train-u">
+                                        <img src="img/upload.png" alt="">
+                                        <label class="label-text" for="training-c">Upload a Corpus</label>
+                                        <label class="label-des" for="training-c">.csv, .txt</label>
+                                    </div>
+                                </div>
+                                <hr>
+                                <div class="panel-item">
+                                    <label class="label-item" for="testing-c">Testing Corpus</label>
+                                    <div class="ratio">
+                                        <input type="radio" id="test-s" name="test" value="test-s">
+                                        <select id="corpus" name="corpus">
+                                            <option value="E1">English 1</option>
+                                            <option value="E2">English 2</option>
+                                            <option value="E3">English 3</option>
+                                        </select>
+                                    </div>
+                                    <div class="ratio">
+                                        <input type="radio" id="test-u" name="test" value="test-u">
+                                        <img src="img/upload.png" alt="">
+                                        <label class="label-text" for="testing-c">Upload a Corpus</label>
+                                        <label class="label-des" for="testing-c">.csv, .txt</label>
+                                    </div>
+                                </div>
+                                <hr>
+                                <div class="button-item">
+                                    <a href="#" class="button-main">Next</a>
+                                    <a href="#" class="button-sec">Clear</a>
+                                </div>
+                            </form>  
+                        </div>
+                    </div>
+
+                    <button class="accordion">Model Configuration</button>
+                    <div class="panel">
+                        <div class="panel-wrapper">
+                            <form action="">
+                                <div class="panel-item">
+                                    <label class="label-item" for="tremor">Tremor</label>
+                                    <div class="slider-container">
+                                        <input class="slider" type="range" min="0" max="100" value="0" id="tre-s" >
+                                        <p class="slider-value"> <span id="tre-v"></span></p>
+                                    </div>
+                                </div>
+                                <hr>
+                                <div class="panel-item">
+                                    <label class="label-item" for="expertise">Expertise</label>
+                                    <div class="slider-container">
+                                        <input class="slider" type="range" min="0" max="100" value="50" id="exp-s" >
+                                        <p class="slider-value"> <span id="exp-v"></span></p>
+                                    </div>
+                                </div>
+                                <hr>
+                                <div class="panel-item">
+                                    <label class="label-item" for="dyslexia">Dyslexia </label>
+                                    <div class="slider-container">
+                                        <input class="slider" type="range" min="0" max="100" value="50" id="dys-s" >
+                                        <p class="slider-value"> <span id="dys-v"></span></p>
+                                    </div>
+                                </div>
+                                <hr>
+                                <div class="button-item">
+                                    <a href="#" class="button-main">Next</a>
+                                    <a href="#" class="button-sec">Clear</a>
+                                </div>
+                            </form>  
+                        </div>
+                    </div>
+
+                    <button class="accordion">Device Specification</button>
+                    <div class="panel">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                    </div>
+
+                    <button class="accordion">Keyboard Setting</button>
+                    <div class="panel">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                    </div>
+
+                    <button class="accordion">Device & Keyboard Preview</button>
+                    <div class="panel">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                    </div>
+
+                    <div class="button-page">
+                        <div class="button-cus">
+                            <a href="#" class="button-dis">Start Training</a>
+                            <a href="#" class="button-sec">Clear</a>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>             
+        </div>
+    </div>
+
+    <script src="js/parameter.js"></script>
+</body>
+</html>
